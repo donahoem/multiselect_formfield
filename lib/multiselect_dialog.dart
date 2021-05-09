@@ -67,7 +67,11 @@ class _MultiSelectDialogState<V> extends State<MultiSelectDialog<V>> {
   Widget build(BuildContext context) {
     return AlertDialog(
       title: widget.title,
-      shape: widget.dialogShapeBorder,
+      shape: RoundedRectangleBorder( // custom
+        borderRadius: BorderRadius.circular(30),
+        side: BorderSide(color: Colors.white, width: 3)
+      ),
+      backgroundColor: Colors.blue[200], // custom
       contentPadding: EdgeInsets.only(top: 12.0),
       content: SingleChildScrollView(
         child: ListTileTheme(
